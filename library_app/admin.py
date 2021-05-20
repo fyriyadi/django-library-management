@@ -3,7 +3,7 @@ from library_app.models import Book, Author, Publisher, Subject, Borrow
 
 class BookAdmin(admin.ModelAdmin):
     readonly_fields = ('date_added',)
-    fields = ['title','author', 'subject', 'date_added',]
+    fields = ['title','author', 'subject', 'date_added', 'cover']
     # author and subject can't be displayed with for loop
     # fields = [field.name for field in Book._meta.fields if field.name != "id"]
     list_display = ['title','date_added']
